@@ -21,36 +21,46 @@
           -o-background-size: cover;
           background-size: cover;    
         }
+        .flex-container{
+          justify-content: center;
+          display:flex;
+        }
     </style>
   </head>
   <body>
     <div class="display-1 mb-3 text-center" style="color:black">Welcome to the Library</div>
-    <button type="submit" class="btn btn-success" style="margin-left:40%;">New Book?</button>
-    <button type="submit" class="btn btn-primary" style="margin-left:55%;position:relative;bottom:36px">Show the list..</button>
-    <div class="container text-center" id="main" style="width:800px;height:400px;margin-top:2%;color:white;background-color:black;opacity:.75;display:none;border-radius:3%">
-        <div class="display-4" style="font-size:200%">Enter the details here</div>
-        <!--form-->
-        <form>
-          <div class="form-group">
-            <label for="Title" style="float:left">Title</label>
-            <input type="text" class="form-control" id="Title" placeholder="Enter book name..">
-          </div>
-          <div class="form-group">
-            <label for="Author" style="float:left">Author</label>
-            <input type="text" class="form-control" id="Author" placeholder="Enter author name..">
-          </div>
-          <div class="form-group">
-            <label for="pg_num" style="float:left">Number of pages</label>
-            <input type="number" class="form-control" id="pg_num" placeholder="Enter number of pages..">
-          </div>
-          <div class="form-group">
-            <label for="read">Read the book?</label>
-            <input type="checkbox" data-toggle="toggle" data-on="Enabled" data-off="Disabled" id="read">
-          </div>
-          <button type="submit" class="btn btn-default submit">Submit</button>
-        </form>
+    <div class="flex-container mb-2">
+      <button type="submit" class="btn btn-success mr-3">New Book?</button>
+      <button type="submit" class="btn btn-primary">Show the list..</button>
     </div>
-    <table class="table table-dark table-hover text-center" style="width:50%;margin-left:25%;margin-right:15%;display:none" id="my-table">
+    <div class="flex-container">
+      <div class="container text-center" id="main" style="width:800px;height:400px;margin-top:2%;color:white;background-color:black;opacity:.75;display:none;border-radius:3%">
+          <div class="display-4" style="font-size:200%">Enter the details here</div>
+          <!--form-->
+          <form>
+            <div class="form-group">
+              <label for="Title" style="float:left">Title</label>
+              <input type="text" class="form-control" id="Title" placeholder="Enter book name..">
+            </div>
+            <div class="form-group">
+              <label for="Author" style="float:left">Author</label>
+              <input type="text" class="form-control" id="Author" placeholder="Enter author name..">
+            </div>
+            <div class="form-group">
+              <label for="pg_num" style="float:left">Number of pages</label>
+              <input type="number" class="form-control" id="pg_num" placeholder="Enter number of pages..">
+            </div>
+            <div class="form-group">
+              <label for="read">Read the book?</label>
+              <input type="checkbox" data-toggle="toggle" data-on="Enabled" data-off="Disabled" id="read">
+            </div>
+            <button type="submit" class="btn btn-default submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="flex-container">
+      <table class="table table-dark table-hover text-center" style="width:800px;display:none" id="my-table">
         <thead>
           <tr>
             <th>Title</th>
@@ -60,6 +70,7 @@
           </tr>
         </thead>
       </table>
+    </div>
     <!-- Optional JavaScript -->
     <script type="text/JavaScript">
       $(".btn-success").click(function(){
